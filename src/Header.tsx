@@ -57,6 +57,14 @@ const Menu = styled.nav`
         font-size: 1.3rem;
       }
     }
+
+    @media (max-width: 1024px) {
+      margin-right: 2rem;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    }
   }
 `;
 
