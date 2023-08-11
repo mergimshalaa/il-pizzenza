@@ -9,7 +9,7 @@ const Header = () => {
       <HouseIcon>
         <FontAwesomeIcon icon={faHome} />
       </HouseIcon>
-      <nav>
+      <Menu>
         <ul>
           <li>Menu</li>
           <li>Adress</li>
@@ -19,7 +19,7 @@ const Header = () => {
         <HamburgerIcon>
           <FontAwesomeIcon icon={faBars} style={{ color: 'white', fontSize: '2.2rem', cursor: 'pointer' }} />
         </HamburgerIcon>
-      </nav>
+      </Menu>
     </HeaderContainer>
   );
 };
@@ -38,6 +38,27 @@ const HouseIcon = styled.div`
   font-size: 2.2rem;
 `;
 
+const Menu = styled.nav`
+  ul {
+    display: flex;
+    align-items: center;
+    margin-right: 7rem;
+
+    li {
+      color: white;
+      margin-left: 4rem;
+      display: flex;
+      align-items: center;
+      font-size: 1.6rem;
+      cursor: pointer;
+
+      @media (max-width: 1024px) {
+        margin-left: 3rem;
+        font-size: 1.3rem;
+      }
+    }
+  }
+`;
 
 const HamburgerIcon = styled.div`
   display: none;
