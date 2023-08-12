@@ -5,6 +5,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import pizzaImage from "./img/pizze.png";
+import pastaImage from "./img/pastaaa.png";
 import styled from "styled-components";
 
 const ProductPage = () => {
@@ -21,14 +22,16 @@ const ProductPage = () => {
         </PizzaDiv>
       </PizzaWrapper>
 
-      <div>
-        <div>
-          <FontAwesomeIcon icon={faUtensils} />
-        </div>
-        <div>
-          <h2>PASTA.</h2>
-        </div>
-      </div>
+      <PastaWrapper>
+        <PastaIcondiv>
+          <IconWrapper>
+            <FontAwesomeIcon icon={faUtensils} />
+          </IconWrapper>
+        </PastaIcondiv>
+        <PastaDiv>
+          <StyledHeader>PASTA.</StyledHeader>
+        </PastaDiv>
+      </PastaWrapper>
 
       <div>
         <div>
@@ -44,7 +47,7 @@ const ProductPage = () => {
 
 export default ProductPage;
 
-/* -------- STYLING FOR PIZZA CONTENT WITH IMAGE, TEXT & ICONS -------- */
+/* -------- STYLING FOR PIZZA WITH IMAGE, TEXT & ICONS -------- */
 
 const PizzaWrapper = styled.div`
   display: flex;
@@ -52,7 +55,6 @@ const PizzaWrapper = styled.div`
   height: 600px;
   width: 100%;
   font-weight: 400;
-  font-style: normal;
   font-size: 2.5rem;
 `;
 
@@ -93,4 +95,38 @@ const StyledHeader = styled.h2`
   position: relative;
   cursor: pointer;
   -webkit-text-stroke: 1px black;
+`;
+
+/* -------- STYLING FOR PASTA WITH IMAGE, TEXT & ICONS -------- */
+
+const PastaWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  height: 600px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 2.5rem;
+`;
+
+const PastaIcondiv = styled.div`
+  background-image: url(${pastaImage});
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+`;
+
+const PastaDiv = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background: #f9f5f6;
+  flex-direction: column;
 `;
