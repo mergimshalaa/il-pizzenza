@@ -38,12 +38,30 @@ const Content = styled.div`
     font-size: 1.5rem;
     margin: 20px auto 0;
     font-family: "Arial Italic", sans-serif;
+
+    @media (max-width: 1024px) {
+      font-size: 1rem;
+    }
+
+    @media (max-width: 640px) {
+      font-size: 0.8rem;
+    }
   }
 `;
 
 const LogoImage = styled.img`
   width: 500px;
   height: 360px;
+
+  @media (max-width: 1024px) {
+    width: 400px;
+    height: 288px;
+  }
+
+  @media (max-width: 640px) {
+    width: 280px;
+    height: 200px;
+  }
 `;
 
 export default FirstPage;
