@@ -5,13 +5,13 @@ import backgroundImage from "./img/ManarolaItaly.png";
 const FirstPage = () => {
   return (
     <HomePageWrapper>
-      <div>
+      <Content>
         <LogoImage src={logo} alt="Logotyp" />
         <p>
           Your local pasta bar in Manarola. Homemade pasta & pizza in the
           classic Italian way with small dishes made from fresh ingredients.
         </p>
-      </div>
+      </Content>
     </HomePageWrapper>
   );
 };
@@ -25,6 +25,20 @@ const HomePageWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const Content = styled.div`
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+  margin-bottom: 8rem;
+
+  p {
+    max-width: 400px;
+    font-size: 1.5rem;
+    margin: 20px auto 0;
+    font-family: "Arial Italic", sans-serif;
+  }
 `;
 
 const LogoImage = styled.img`
