@@ -6,6 +6,7 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import pizzaImage from "./img/pizze.png";
 import pastaImage from "./img/pastaaa.png";
+import drinkImage from "./img/drienks.png";
 import styled from "styled-components";
 
 const ProductPage = () => {
@@ -33,21 +34,23 @@ const ProductPage = () => {
         </PastaDiv>
       </PastaWrapper>
 
-      <div>
-        <div>
-          <FontAwesomeIcon icon={faMartiniGlass} />
-        </div>
-        <div>
-          <h2>COCKTAILS.</h2>
-        </div>
-      </div>
+      <DrinkWrapper>
+        <DrinkBgdiv>
+          <IconWrapper>
+            <FontAwesomeIcon icon={faMartiniGlass} />
+          </IconWrapper>
+        </DrinkBgdiv>
+        <DrinkDiv>
+          <StyledHeader>COCKTAILS.</StyledHeader>
+        </DrinkDiv>
+      </DrinkWrapper>
     </>
   );
 };
 
 export default ProductPage;
 
-/* -------- STYLING FOR PIZZA WITH IMAGE, TEXT & ICONS -------- */
+/* ------------- STYLING FOR PIZZA WITH IMAGE, TEXT & ICON ------------ */
 
 const PizzaWrapper = styled.div`
   display: flex;
@@ -97,7 +100,7 @@ const StyledHeader = styled.h2`
   -webkit-text-stroke: 1px black;
 `;
 
-/* -------- STYLING FOR PASTA WITH IMAGE, TEXT & ICONS -------- */
+/* ------------ STYLING FOR PASTA WITH IMAGE, TEXT & ICON ------------- */
 
 const PastaWrapper = styled.div`
   display: flex;
@@ -129,4 +132,38 @@ const PastaDiv = styled.div`
   height: 100%;
   background: #f9f5f6;
   flex-direction: column;
+`;
+
+/* ------------- STYLING FOR COCKTAILS WITH IMAGE, TEXT & ICON ------------ */
+
+const DrinkWrapper = styled.div`
+  display: flex;
+  flex-direction: row-reverse;
+  height: 600px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 2.5rem;
+`;
+
+const DrinkBgdiv = styled.div`
+  background-image: url(${drinkImage});
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+`;
+
+const DrinkDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  background: #f31559;
 `;
