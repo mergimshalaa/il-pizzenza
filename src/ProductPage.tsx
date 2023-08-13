@@ -4,8 +4,10 @@ import {
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import drinkImage from "./img/drienks.png";
+import drinkBgimage from "./img/drinks-bgcolor.png";
+import pastaBgimage from "./img/pasta-bgcolor.png";
 import pastaImage from "./img/pastaaa.png";
 import pizzaBgimage from "./img/pizze-bgcolor.png";
 import pizzaImage from "./img/pizze.png";
@@ -116,8 +118,9 @@ const StyledHeader = styled.h2`
   font-size: 4rem;
   position: relative;
   font-family: "baskerville";
-  cursor: pointer;
+    cursor: pointer;
   -webkit-text-stroke: 1px black;
+  }
 
   @media (max-width: 1024px) {
     font-size: 3rem;
@@ -133,6 +136,10 @@ const PastaWrapper = styled.div`
   width: 100%;
   font-weight: 400;
   font-size: 2.5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const PastaIcondiv = styled.div`
@@ -146,6 +153,11 @@ const PastaIcondiv = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: none;
+  }
 `;
 
 const PastaDiv = styled.div`
@@ -156,10 +168,18 @@ const PastaDiv = styled.div`
   height: 100%;
   background: #F9F5F6;
   flex-direction: column;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    background-image: url(${pastaBgimage});
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 `;
 
 /* ------------- STYLING FOR COCKTAILS WITH IMAGE, TEXT & ICON ------------ */
-
 const DrinkWrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -167,6 +187,10 @@ const DrinkWrapper = styled.div`
   width: 100%;
   font-weight: 400;
   font-size: 2.5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const DrinkBgdiv = styled.div`
@@ -180,6 +204,12 @@ const DrinkBgdiv = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
 `;
 
 const DrinkDiv = styled.div`
@@ -190,4 +220,13 @@ const DrinkDiv = styled.div`
   width: 50%;
   height: 100%;
   background: #f31559;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    background-image: url(${drinkBgimage});
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 `;
