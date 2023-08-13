@@ -55,7 +55,6 @@ export default ProductPage;
 
 /* ------------- STYLING FOR PIZZA WITH IMAGE, TEXT & ICON ------------ */
 
-
 const PizzaWrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -187,7 +186,7 @@ const PastaDiv = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
-  background: #F9F5F6;
+  background: #f9f5f6;
   flex-direction: column;
 
   @media (max-width: 1024px) {
