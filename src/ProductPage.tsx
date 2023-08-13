@@ -55,6 +55,7 @@ export default ProductPage;
 
 /* ------------- STYLING FOR PIZZA WITH IMAGE, TEXT & ICON ------------ */
 
+
 const PizzaWrapper = styled.div`
   display: flex;
   flex-direction: row-reverse;
@@ -113,13 +114,34 @@ const PizzaDiv = styled.div`
   }
 `;
 
+const underlineAnimation = keyframes`
+  0%, 100% {
+    width: 0;
+  }
+  50% {
+    width: 100%;
+  }
+`;
+
 const StyledHeader = styled.h2`
   color: white;
   font-size: 4rem;
   position: relative;
   font-family: "baskerville";
-    cursor: pointer;
+  cursor: pointer;
   -webkit-text-stroke: 1px black;
+
+  &:hover {
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: -0.3rem;
+      left: 0;
+      width: 100%;
+      height: 0.2rem;
+      background-color: white;
+      animation: ${underlineAnimation} 3s forwards;
+    }
   }
 
   @media (max-width: 1024px) {
@@ -128,7 +150,6 @@ const StyledHeader = styled.h2`
 `;
 
 /* ------------ STYLING FOR PASTA WITH IMAGE, TEXT & ICON ------------- */
-
 const PastaWrapper = styled.div`
   display: flex;
   flex-direction: row;
