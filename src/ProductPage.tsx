@@ -4,10 +4,11 @@ import {
   faUtensils,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import pizzaImage from "./img/pizze.png";
-import pastaImage from "./img/pastaaa.png";
-import drinkImage from "./img/drienks.png";
 import styled from "styled-components";
+import drinkImage from "./img/drienks.png";
+import pastaImage from "./img/pastaaa.png";
+import pizzaBgimage from "./img/pizze-bgcolor.png";
+import pizzaImage from "./img/pizze.png";
 
 const ProductPage = () => {
   return (
@@ -59,6 +60,10 @@ const PizzaWrapper = styled.div`
   width: 100%;
   font-weight: 400;
   font-size: 2.5rem;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 `;
 
 const Bgdiv = styled.div`
@@ -72,6 +77,11 @@ const Bgdiv = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    display: none;
+  }
 `;
 
 const IconWrapper = styled.div`
@@ -90,14 +100,28 @@ const PizzaDiv = styled.div`
   width: 50%;
   height: 100%;
   background: #7a9d54;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    background-image: url(${pizzaBgimage});
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
 `;
 
 const StyledHeader = styled.h2`
   color: white;
   font-size: 4rem;
   position: relative;
+  font-family: "baskerville";
   cursor: pointer;
   -webkit-text-stroke: 1px black;
+
+  @media (max-width: 1024px) {
+    font-size: 3rem;
+  }
 `;
 
 /* ------------ STYLING FOR PASTA WITH IMAGE, TEXT & ICON ------------- */
@@ -130,7 +154,7 @@ const PastaDiv = styled.div`
   align-items: center;
   width: 50%;
   height: 100%;
-  background: #f9f5f6;
+  background: #F9F5F6;
   flex-direction: column;
 `;
 
