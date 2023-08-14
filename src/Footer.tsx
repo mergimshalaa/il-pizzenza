@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export function Footer() {
   return (
-    <footer>
+    <FooterWrapper>
       
       <div>
         <div>
@@ -45,6 +45,14 @@ export function Footer() {
         <p>VIA Renato Birolli 149 19017 Manarola, Riomaggiore SP ITALY</p>
       </div>
 
-    </footer>
+    </FooterWrapper>
   );
 }
+
+const FooterWrapper = styled.footer`
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0 1rem;
+  font-size: 1.3rem;
+  background-color: #000000;
+`;
