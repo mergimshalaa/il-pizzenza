@@ -6,7 +6,7 @@ export function Footer() {
       
       <Section>
         <Header>
-          <h3>OPENING HOURS</h3>
+          <Title>OPENING HOURS</Title>
         </Header>
         <div>
           <ul>
@@ -32,16 +32,16 @@ export function Footer() {
 
       <Section>
         <Header>
-          <h3>CONTACT</h3>
+          <Title>CONTACT</Title>
         </Header>
         <p>ilpizzenza@manarola.com</p>
         <p>TEL: 0000-00000</p>
       </Section>
 
       <Section>
-        <div>
-          <Header>ADRESS</Header>
-        </div>
+        <Header>
+          <Title>ADRESS</Title>
+        </Header>
         <p>VIA Renato Birolli 149 19017 Manarola, Riomaggiore SP ITALY</p>
       </Section>
 
@@ -71,4 +71,10 @@ const Header = styled.div`
   display: flex;
   padding-bottom: 1rem;
   align-items: center;
+`;
+
+const Title = styled.h3`
+  text-decoration: underline;
+  font-size: 2rem;
+  // color: #ffffff;
 `;
