@@ -4,10 +4,10 @@ export function Footer() {
   return (
     <FooterWrapper>
       
-      <div>
-        <div>
+      <Section>
+        <Header>
           <h3>OPENING HOURS</h3>
-        </div>
+        </Header>
         <div>
           <ul>
             <li>Monday</li>
@@ -28,22 +28,22 @@ export function Footer() {
             <li>CLOSED</li>
           </ul>
         </div>
-      </div>
+      </Section>
 
-      <div>
-        <div>
+      <Section>
+        <Header>
           <h3>CONTACT</h3>
-        </div>
+        </Header>
         <p>ilpizzenza@manarola.com</p>
         <p>TEL: 0000-00000</p>
-      </div>
+      </Section>
 
-      <div>
+      <Section>
         <div>
-          <h3>ADRESS</h3>
+          <Header>ADRESS</Header>
         </div>
         <p>VIA Renato Birolli 149 19017 Manarola, Riomaggiore SP ITALY</p>
-      </div>
+      </Section>
 
     </FooterWrapper>
   );
@@ -54,5 +54,21 @@ const FooterWrapper = styled.footer`
   justify-content: space-between;
   padding: 2rem 0 1rem;
   font-size: 1.3rem;
-  background-color: #000000;
+  // background-color: #000000;
+`;
+
+const Section = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 4rem;
+  font-family: 'Baskerville';
+`;
+
+const Header = styled.div`
+  display: flex;
+  padding-bottom: 1rem;
+  align-items: center;
 `;
