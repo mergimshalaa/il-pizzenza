@@ -36,6 +36,7 @@ const HouseIcon = styled.div`
   color: white;
   margin-left: 25px;
   font-size: 2.2rem;
+  cursor: pointer;
 `;
 
 const Menu = styled.nav`
@@ -47,8 +48,6 @@ const Menu = styled.nav`
     li {
       color: white;
       margin-left: 4rem;
-      display: flex;
-      align-items: center;
       font-size: 1.6rem;
       cursor: pointer;
 
