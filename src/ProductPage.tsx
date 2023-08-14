@@ -140,6 +140,7 @@ const StyledHeader = styled.h2`
       height: 0.2rem;
       background-color: white;
       animation: ${underlineAnimation} 3s forwards;
+      cursor: pointer;
     }
   }
 
