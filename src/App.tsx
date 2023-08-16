@@ -1,7 +1,8 @@
 import Header from './Header';
 
-import FirstPage from './HomePage';
 import { Footer } from './Footer';
+import FirstPage from './HomePage';
+import Location from './Location';
 import ProductPage from './ProductPage';
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
     <Header />
     <FirstPage />
     <ProductPage />
+    <Location />
     <Footer />
     </>
   )
