@@ -116,7 +116,7 @@ const Address = styled.p`
   max-width: 300px;
 
   @media (max-width: 1024px) {
-    font-size: 1rem;
+    font-size: 20px;
   }
 `;
 
@@ -125,6 +125,6 @@ const Styledp = styled.p`
   max-width: 300px;
 
   @media (max-width: 1024px) {
-    font-size: 1rem;
+    font-size: 20px;
   }
 `;
