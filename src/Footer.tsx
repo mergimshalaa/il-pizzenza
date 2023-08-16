@@ -34,15 +34,15 @@ export function Footer() {
         <Header>
           <Title>CONTACT</Title>
         </Header>
-        <p>ilpizzenza@manarola.com</p>
-        <p>TEL: 0000-00000</p>
+        <Styledp>ilpizzenza@manarola.com</Styledp>
+        <Styledp>TEL: 0000-00000</Styledp>
       </Section>
 
       <Section>
         <Header>
           <Title>ADRESS</Title>
         </Header>
-        <p>VIA Renato BirolListItem 149 19017 Manarola, Riomaggiore SP ITALY</p>
+        <Address>VIA Renato Birolli 149 19017 Manarola, Riomaggiore SP ITALY</Address>
       </Section>
 
     </FooterWrapper>
@@ -55,6 +55,12 @@ const FooterWrapper = styled.footer`
   padding: 2rem 0 1rem;
   font-size: 1.3rem;
   background-color: #000000;
+
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
 `;
 
 const Section = styled.div`
@@ -73,16 +79,25 @@ const Header = styled.div`
   align-items: center;
 `;
 
+
 const Title = styled.h3`
   text-decoration: underline;
   font-size: 2rem;
   color: #ffffff;
+
+  @media (max-width: 1024px) {
+    font-size: 1.2rem;
+  }
 `;
 
 const Content = styled.div`
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
 
 const List = styled.ul`
@@ -93,4 +108,23 @@ const List = styled.ul`
 const ListItem = styled.li`
   color: #ffffff;
   padding: 0.2rem 0;
+`;
+
+const Address = styled.p`
+  color: #ffffff;
+  text-align: center;
+  max-width: 300px;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
+`;
+
+const Styledp = styled.p`
+  color: #ffffff;
+  max-width: 300px;
+
+  @media (max-width: 1024px) {
+    font-size: 1rem;
+  }
 `;
