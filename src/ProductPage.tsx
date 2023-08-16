@@ -87,7 +87,7 @@ const Bgdiv = styled.div`
 `;
 
 const IconWrapper = styled.div`
-  font-size: 11rem;
+  font-size: 8rem;
   color: #000000;
   display: flex;
   justify-content: center;
@@ -124,7 +124,7 @@ const underlineAnimation = keyframes`
 
 const StyledHeader = styled.h2`
   color: #000000;
-  font-size: 68px;
+  font-size: 3.6rem;
   position: relative;
   font-family: "baskerville";
   font-weight: bold;
