@@ -123,12 +123,13 @@ const underlineAnimation = keyframes`
 `;
 
 const StyledHeader = styled.h2`
-  color: white;
-  font-size: 4rem;
+  color: #000000;
+  font-size: 68px;
   position: relative;
   font-family: "baskerville";
-  cursor: pointer;
-  -webkit-text-stroke: 1px black;
+  font-weight: bold;
+  cursor: pointer;  
+  
 
   &:hover {
     &:before {
@@ -138,7 +139,7 @@ const StyledHeader = styled.h2`
       left: 0;
       width: 100%;
       height: 0.2rem;
-      background-color: white;
+      background-color: #000000;
       animation: ${underlineAnimation} 3s forwards;
       cursor: pointer;
     }
