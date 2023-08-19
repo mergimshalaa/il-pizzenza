@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import locationImage from './img/Locationn.png';
+import locationImage from './img/Location.png';
 
 export default function Location() {
     return (
